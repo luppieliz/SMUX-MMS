@@ -1,5 +1,5 @@
 from start import start
-from menu import menu
+from menu.menu import menu
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
 import logging
@@ -15,6 +15,6 @@ dispatcher = updater.dispatcher
 start_handler = CommandHandler('start', start)
 dispatcher.add_handler(start_handler)
 updater.dispatcher.add_handler(CommandHandler('menu', menu))
-\
+
 #Polling
 updater.start_polling()
